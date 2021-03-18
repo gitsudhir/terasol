@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 // define a root/default route
 app.get('/', (req, res) => {
-	res.json({ "message": "Hello World " });
+	res.json({ "message": "Hello World ", "time": Date().toLocaleString() });
 });
 // listen for requests
 app.listen(port, () => {
